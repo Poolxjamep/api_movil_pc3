@@ -10,7 +10,7 @@ import com.redsocial.entity.Autor;
 
 public interface AutorRepository extends JpaRepository<Autor, Integer> {
 
-	@Query("select x from Editorial x where x.nombre = :var_filtro")
+	@Query("select x from Autor x where x.nombres = :var_filtro")
 	public List<Autor> listaPorNombre(@Param("var_filtro") String filtro);
 
 }

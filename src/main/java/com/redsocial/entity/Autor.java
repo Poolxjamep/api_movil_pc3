@@ -23,7 +23,7 @@ public class Autor {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int idAutor;
-	private String nombre;
+	private String nombres;
 	private String apaterno;
 	private String amaterno;
 	
