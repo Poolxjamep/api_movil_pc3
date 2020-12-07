@@ -16,14 +16,13 @@ import com.redsocial.service.AutorService;
 @RequestMapping("/api/rest/autor")
 public class AutorController {
 	
-	
 	@Autowired
 	private AutorService service;
 	
 	@GetMapping("/")
 	public ResponseEntity<List<Autor>> lista(){
 		return ResponseEntity.ok(service.listaAutor());
-}
+	}
 	@GetMapping("/porNombre/{filtro}")
 	public ResponseEntity<List<Autor>> listaPorNombre(@PathVariable String filtro){
 		return ResponseEntity.ok(service.listaAutorPorNombre(filtro));
